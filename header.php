@@ -55,13 +55,14 @@
                 </a>
             </div>
             <?php
-					$tags = get_tags();
+		  $tags = get_tags();
                     $html = ' / ';
                     foreach ( $tags as $tag ) {
+				$tag_link = get_tag_link( $tag->term_id );
 	                	$html .= "<span><i class='czs-tag-l'></i> <a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'> ";
-	                    $html .= "{$tag->name} </a></span>";
-                    }
-            echo $html; ?>
+	                       $html .= "{$tag->name} </a></span>"; 
+		    }
+		echo $html; ?>
             
             <div class="socials">
                 <div class="donate">
